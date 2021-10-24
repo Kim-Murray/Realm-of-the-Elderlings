@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Elderlings</title>
+    <style>
+      body {
+        background: linear-gradient(180deg, #e0ddd6, rgba(88, 42, 42, 0.6));
+      }
+      h1 {
+        font-family: "harrington";
+        text-align: center;
+        padding: 15px;
+        font-size: 1.8em;
+        border: 5px double white;
+        border-radius: 10px;
+        background-color: rgba(88, 42, 42, 0.3);
+      }
+
+      h2 {
+        font-family: "papyrus";
+        font-size: 1.3em;
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      hr {
+        border: 1px solid rgb(88, 42, 42);
+      }
+
+      a {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: rgb(88, 42, 42);
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 20px 30px;
+        border: 5px double white;
+        border-radius: 10px;
+        color: white;
+        font-family: "papyrus";
+        font-size: 16px;
+        background-color: rgb(88, 42, 42);
+        box-shadow: 0px 5px 10px rgba(88, 42, 42, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        color: black;
+        background-color: rgba(88, 42, 42, 0.3);
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 10px 20px 20px 20px;
+        background-color: #e9f0ef;
+        border-radius: 10px;
+      }
+
+      .description {
+        text-align: justify;
+        font-family: Helvetica;
+        font-size: 14px;
+        line-height: 25px;
+      }
+
+      .footer {
+        text-align: center;
+        font-family: monospace;
+      }
+
+      .developer {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>⚔ The Realm of the Elderlings 🐺</h1>
+      <h2>A world of political intrigue, magic and wonder</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/015/350/original/Hobb2.jpg?1629130737"
+        alt="The Farseer Trilogy"
+      />
+      <hr />
+      <p class="description">
+        <strong>The Realm of the Elderlings</strong>, a 16 book series by Robin
+        Hobb. Begin with <em>The Farseer Trilogy</em> (pictured above) and meet
+        Fitz, a 6 year old boy, cast out by his maternal grandfather and sent to
+        live at the palace in Buckkeep. Simultainuously a member of the royal
+        family and an outcast, Fitz is trained to become a royal assassin to
+        King Shrewd. As he grows to accept his fate and put his life on the line
+        for the good of the Realm he begins to discover he may have other
+        abilities that could get him into a lot of trouble should others
+        discover them.
+        <a href="http://www.robinhobb.com/works.htm" target="_blank"
+          >More info at robinhobb.com</a
+        >
+      </p>
+      <hr />
+      <br />
+      <button><strong>Buy Assassin's Apprentice</strong></button>
+    </div>
+    <p class="footer">
+      This page was built by <span class="developer">Kim Murray</span>
+    </p>
+    <script>
+      function purchase() {
+        name = prompt("What is your name?");
+        email = prompt("What is your email address?");
+        animal = prompt("Do you prefer wolves 🐺 or dragons 🐲?");
+        animal = animal.toLowerCase();
+        animal = animal.trim();
+        animal = animal.replace("wolfs", "wolves");
+
+        if (animal === "wolves" || animal === "🐺") {
+          alert(
+            `🐺 Thank you for choosing to purchase Assassin's Apprentice ${name}!  We will be in touch via email with further details 🐺`
+          );
+        } else {
+          alert(
+            `🐲 Thank you for choosing to purchase Assassin's Apprentice ${name}!  We will be in touch via email with further details 🐲`
+          );
+        }
+      }
+      let purchaseButton = document.querySelector("button");
+      purchaseButton.addEventListener("click", purchase);
+    </script>
+  </body>
+</html>
